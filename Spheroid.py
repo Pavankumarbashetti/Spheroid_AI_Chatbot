@@ -1,6 +1,6 @@
 from DischargeFeatures import discharge_planning
 from EntityRecogniser import predict_intent
-from RiskAnalysis import RiskAnalysis
+from RiskAnalysis import RiskAnalysis_predict
 import speech_recognition as sr
 import pandas as pd
 import urllib as ul
@@ -112,7 +112,7 @@ def appointment():
 
 def submit_form(name, age, gender, medical_history, insurance, date, time,selected_doctors, form_window):
     try:
-        RiskAnalysis(name,age,gender,medical_history,conversation,user_spoke)
+        RiskAnalysis_predict(name,age,gender,medical_history,conversation,user_spoke)
     except KeyError:
         print("Unable to recognize")
     except ValueError as vr:
