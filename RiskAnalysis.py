@@ -29,7 +29,7 @@ def Speak(audio):
     Asst.runAndWait()
 
 
-def RiskAnalysis(name_db, Age_db, Gender_db, Medical_History_db,conversation,user_spoke):
+def RiskAnalysis_predict(name_db, Age_db, Gender_db, Medical_History_db,conversation,user_spoke):
 
     patient_data = pd.read_csv(
         r'C:\Users\***PATH***\patient_data.csv')
